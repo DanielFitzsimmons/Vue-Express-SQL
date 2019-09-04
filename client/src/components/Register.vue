@@ -20,7 +20,7 @@ export default {
 methods: {
     async register () {
         const responce = await AuthenticationService.register({
-        email: this.email,
+        email: "test@test",
         password: this.password
         })
         console.log(responce.data)
