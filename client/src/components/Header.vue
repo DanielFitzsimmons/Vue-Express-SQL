@@ -16,6 +16,9 @@
           <b-nav-form>
             <router-link v-if="!$store.state.isUserLoggedIn" to="/login" class="btn btn-primary mr-2">Login</router-link>
             <router-link v-if="!$store.state.isUserLoggedIn" to="/register" class="btn btn-secondary">Register</router-link>
+            
+            <b-button variant="danger" v-if="$store.state.isUserLoggedIn" @click="logout">Log out</b-button>
+
           </b-nav-form>
         </b-navbar-nav>
       </b-collapse>
@@ -26,7 +29,14 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  methods: {
+    logout() {
+      this.$store.dispatch('setToken', null)
+      this.$store.dispatch('setUser', null)
+      this.$router.push({name: 'root'})
+    }
+  }
 }
 </script>
 
