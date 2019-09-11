@@ -7,8 +7,8 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <router-link to="register" class="btn btn-primary">Register</router-link>
-          <router-link to="login" class="btn btn-primary">Login</router-link>
+          <router-link v-if="!$store.state.isUserLoggedIn" to="register" class="btn btn-primary">Register</router-link>
+          <router-link v-if="!$store.state.isUserLoggedIn" to="login" class="btn btn-primary">Login</router-link>
         </b-navbar-nav>
 
       </b-collapse>

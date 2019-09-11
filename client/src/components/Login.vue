@@ -35,10 +35,13 @@ export default {
     async login () {
       // try catch block to catch the error messages from the api
       try {
-        await AuthenticationService.login({
+        const response = await AuthenticationService.login({
           email: this.email,
           password: this.password
         })
+        this.$store.dispatch('setToken', response.data.token)
+        this.$store.dispatch('setUser', response.data.user)
+
       } catch (error) {
         // saving the responce to the data property of this commponent
         this.error = error.response.data.error
