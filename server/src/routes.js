@@ -7,5 +7,6 @@ module.exports = (app) => {
         res.send({message: 'hello world'})
     })
     app.post('/register', AuthenticationControllerPolicy.register, AuthenticationController.register)
+    app.post('/login', AuthenticationController.login)
 
 }
