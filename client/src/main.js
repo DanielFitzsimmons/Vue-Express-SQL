@@ -7,10 +7,13 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import {sync} from 'vuex-router-sync'
 import store from '@/store/store'
+import Vuelidate from 'vuelidate'
 
 sync(store, router)
 
+
 Vue.use(BootstrapVue)
+Vue.use(Vuelidate)
 
 Vue.config.productionTip = false
 

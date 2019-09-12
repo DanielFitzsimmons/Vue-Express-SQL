@@ -1,7 +1,7 @@
 <template>
   <div>
       <panel title="Browse">
-          <div v-for="instructionGuide in instructionGuides" key="instructionGuide.id">
+          <div v-for="instructionGuide in instructionGuides" :key="instructionGuide.id">
 
                 {{instructionGuide.title}}
                 {{instructionGuide.author}}

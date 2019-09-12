@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
 import Browse from '@/components/Browse'
+import CreateInstructionGuide from '@/components/CreateInstructionGuide'
 
 Vue.use(Router)
 export default new Router({
@@ -27,6 +28,11 @@ export default new Router({
             path:'/browse',
             name:'browse',
             component: Browse
+        },
+        {
+            path:'/browse/create',
+            name:'createinstructionguide',
+            component: CreateInstructionGuide
         }
     ]
 })
