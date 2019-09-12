@@ -8,7 +8,7 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#">Browse</b-nav-item>
+          <router-link to="/browse" class="mr-2">Browse</router-link>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
