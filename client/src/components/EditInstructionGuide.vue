@@ -148,7 +148,7 @@ export default {
           this.instructionGuide)
 
         this.$router.push({
-          name: 'browse',
+          name: 'viewinstructionguide',
           params: {
             instructionGuideId:this.$store.state.route.params.instructionGuideId
           }
