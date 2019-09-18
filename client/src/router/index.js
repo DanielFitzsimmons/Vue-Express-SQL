@@ -5,6 +5,7 @@ import Register from '@/components/Register'
 import Login from '@/components/Login'
 import Browse from '@/components/Browse'
 import CreateInstructionGuide from '@/components/CreateInstructionGuide'
+import ViewInstructionGuide from '@/components/ViewInstructionGuide'
 
 Vue.use(Router)
 export default new Router({
@@ -33,6 +34,11 @@ export default new Router({
             path:'/browse/create',
             name:'createinstructionguide',
             component: CreateInstructionGuide
+        },
+        {
+            path: '/browse/:instructionGuideId',
+            name: 'viewinstructionguide',
+            component: ViewInstructionGuide
         }
     ]
 })

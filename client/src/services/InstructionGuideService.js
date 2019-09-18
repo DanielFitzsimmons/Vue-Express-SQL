@@ -6,5 +6,8 @@ export default {
     },
     postInstructionGuides(instructionGuides){
         return Api().post('instructionGuides', instructionGuides)
+    },
+    getInstructionGuideById(instructionGuidesId){
+        return Api().get(`instructionGuides/${instructionGuidesId}`)
     }
 }
