@@ -26,5 +26,31 @@ module.exports = {
         error: 'An error has occurred trying to post a new Instruction Guide'
       })
     }
+  },
+  async getInstructionGuideById (req, res) {
+    try {
+      const instructionGuides = await InstructionGuide.findOne({
+        where: {id: req.params.instructionGuidesId}
+      })
+      res.send(instructionGuides) 
+    } catch (err) {
+      console.log(err);
+      res.status(500).send({
+        error: 'An error has occurred trying to get the instruction guide by id'
+      })
+    }
+  },
+  async putInstructionGuideById (req, res) {
+    try {
+      const instructionGuides = await InstructionGuide.update(req.body, {
+        where: {id: req.params.instructionGuidesId}
+      })
+      res.send(instructionGuides) 
+    } catch (err) {
+      console.log(err);
+      res.status(500).send({
+        error: 'An error has occurred trying to get the instruction guide by id'
+      })
+    }
   }
 }

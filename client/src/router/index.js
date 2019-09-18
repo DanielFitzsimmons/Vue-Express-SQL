@@ -6,6 +6,7 @@ import Login from '@/components/Login'
 import Browse from '@/components/Browse'
 import CreateInstructionGuide from '@/components/CreateInstructionGuide'
 import ViewInstructionGuide from '@/components/ViewInstructionGuide'
+import EditInstructionGuide from '@/components/EditInstructionGuide'
 
 Vue.use(Router)
 export default new Router({
@@ -39,6 +40,11 @@ export default new Router({
             path: '/browse/:instructionGuideId',
             name: 'viewinstructionguide',
             component: ViewInstructionGuide
+        },
+        {
+            path: '/browse/:instructionGuideId/edit',
+            name: 'editinstructionguide',
+            component: EditInstructionGuide
         }
     ]
 })
