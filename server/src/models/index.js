@@ -31,3 +31,4 @@ db.Sequelize = Sequelize // This will allow us to access the Sequelize class if 
 
 //Exports
 module.exports = db
+module.exports.Op = Sequelize.Op

@@ -9,7 +9,7 @@ module.exports = (app) => {
     })
     app.post('/register', AuthenticationControllerPolicy.register, AuthenticationController.register)
     app.post('/login', AuthenticationController.login)
-    app.get('/instructionguides', InstructionGuidesController.getAllInstructionGuides)
+    app.get('/instructionguides', InstructionGuidesController.getInstructionGuides)
     app.post('/instructionguides', InstructionGuidesController.postInstructionGuides)
     app.get('/instructionguides/:instructionGuidesId', InstructionGuidesController.getInstructionGuideById)
     

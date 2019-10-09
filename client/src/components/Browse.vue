@@ -46,8 +46,14 @@ export default {
       instructionGuides: null
     }
   },
-  async mounted () {
-    this.instructionGuides = (await InstructionGuideService.getAllInstructionGuides()).data
+  watch: {
+    '$route.query.search' :{
+      immediate: true,
+      async handler (value) {
+        this.instructionGuides = 
+        (await InstructionGuideService.getInstructionGuides(value)).data
+      }
+    }
   }
 }
 </script>
