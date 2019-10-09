@@ -1,5 +1,6 @@
 <template>
   <div>
+     <Search></Search>
       <panel title="Browse">
         <router-link to="/browse/create" class="btn btn-success mr-2 w-100 mb-3">Create Instruction Guide</router-link>
         <div class="row" >
@@ -31,12 +32,14 @@
 <script>
 import InstructionGuideService from '@/services/InstructionGuideService'
 import Panel from '@/components/Panel'
+import Search from '@/components/Search'
 export default {
   name: 'Browse',
   methods: {
   },
   components: {
-    Panel
+    Panel,
+    Search
   },
   data () {
     return {
